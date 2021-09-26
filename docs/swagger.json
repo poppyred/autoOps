@@ -1,0 +1,30 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/api/v1/tasks": {
+            "get": {
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "description": "获取JSON",
+                "tags": [
+                    "任务"
+                ],
+                "summary": "getTaskList",
+                "responses": {
+                    "200": {
+                        "description": "{\"code\": -1, \"message\": \"抱歉未找到相关信息\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

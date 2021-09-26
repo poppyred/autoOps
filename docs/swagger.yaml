@@ -1,0 +1,17 @@
+info:
+  contact: {}
+paths:
+  /api/v1/tasks:
+    get:
+      description: 获取JSON
+      responses:
+        "200":
+          description: '{"code": -1, "message": "抱歉未找到相关信息"}'
+          schema:
+            type: string
+      security:
+      - Bearer: []
+      summary: getTaskList
+      tags:
+      - 任务
+swagger: "2.0"
