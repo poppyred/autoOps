@@ -29,6 +29,9 @@ func InitRouter() http.Handler {
 		httpSwagger.URL("http://127.0.0.1:8002/swagger/doc.json"),
 	)).Methods(http.MethodGet)
 	taskHandle := &FakeHandle{}
+	//审批
+	r.HandleFunc("/api/v1/apply", taskHandle.fake).Methods(http.MethodPut)
+
 	//任务的增删改查
 	r.HandleFunc("/api/v1/tasks", taskHandle.fake).Methods(http.MethodGet)
 	r.HandleFunc("/api/v1/task", taskHandle.fake).Methods(http.MethodPost)
